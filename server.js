@@ -1,5 +1,3 @@
-const port = process.env.PORT || 9000
-const secret = process.env.SECRET || "abracadabra sizzle oops lalala"
 const express = require("express")
 const app = express()
 require("dotenv").config()
@@ -37,7 +35,7 @@ mongoose.connect(
 
 app.use(express.static(path.join(_dirname, "client", "build")))
 app.use("/auth", require("./routes/authRouter.js"))
-app.use("/api", expressJwt({secret: secret, algorithms: ['HS256']}))  //creates req.user -- ALSO:  algorithms: for express-jwt v6.0.0 & higher: adding an algorithm parameter is now required in addition to the secret.
+app.use("/api", expressJwt({secret: process.env.SECRET || "abracadabra sizzle oops lalala", algorithms: ['HS256']}))  //creates req.user -- ALSO:  algorithms: for express-jwt v6.0.0 & higher: adding an algorithm parameter is now required in addition to the secret.
 app.use("/api/issue", require("./routes/issueRouter.js"))
 app.use("/api/comment", require("./routes/commentRouter.js"))
 
@@ -52,6 +50,6 @@ app.use((err, req, res, next) => {
 
 app.get("*", (req, res)=> {res.sendFile(path.join(_dirname, "client", "build", "index.html"))})
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 9000, () => {
     console.log("Server is running on local port 9000")
 })
