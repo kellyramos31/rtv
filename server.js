@@ -25,7 +25,7 @@ app.use(morgan("dev"))
 mongoose.connect(
     process.env.MONGODB_URI,
     {
-        useNewUrlParser: true
+        // useNewUrlParser: true
     },
     () => console.log("Connected to the DB")
 )
