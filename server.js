@@ -1,13 +1,14 @@
 const express = require("express")
 const app = express()
 require("dotenv").config()
-const path = require("path")
 const morgan = require("morgan")
 const mongoose = require("mongoose")
 const expressJwt = require("express-jwt")
+const path = require("path")
 
 app.use(express.json())
 app.use(morgan("dev"))
+app.use(express.static(path.join(_dirname, "client", "build")))
 
 // mongoose.connect(
 //     "mongodb://localhost:27017/user-authentication2",
@@ -23,7 +24,7 @@ app.use(morgan("dev"))
 mongoose.connect(
     process.env.MONGODB_URI,
     {
-        // useNewUrlParser: true
+        useNewUrlParser: true
     },
     () => console.log("Connected to the DB")
 )
@@ -33,7 +34,7 @@ mongoose.connect(
 //     () => console.log("Connected to database.")
 // )
 
-app.use(express.static(path.join(_dirname, "client", "build")))
+
 app.use("/auth", require("./routes/authRouter.js"))
 app.use("/api", expressJwt({secret: process.env.SECRET || "abracadabra sizzle oops lalala", algorithms: ['HS256']}))  //creates req.user -- ALSO:  algorithms: for express-jwt v6.0.0 & higher: adding an algorithm parameter is now required in addition to the secret.
 app.use("/api/issue", require("./routes/issueRouter.js"))
