@@ -9,7 +9,8 @@ const port = process.env.PORT || 9000
 
 app.use(express.json())
 app.use(morgan("dev"))
-app.use(express.static(path.join(_dirname, "client", "build")))
+
+
 
 // mongoose.connect(
 //     "mongodb://localhost:27017/user-authentication2",
@@ -35,11 +36,15 @@ mongoose.connect(
 //     () => console.log("Connected to database.")
 // )
 
+app.use(express.static(path.join(__dirname, "client", "build")))
+
 
 app.use("/auth", require("./routes/authRouter.js"))
 app.use("/api", expressJwt({secret: process.env.SECRET, algorithms: ['HS256']}))  //creates req.user -- ALSO:  algorithms: for express-jwt v6.0.0 & higher: adding an algorithm parameter is now required in addition to the secret.
 app.use("/api/issue", require("./routes/issueRouter.js"))
 app.use("/api/comment", require("./routes/commentRouter.js"))
+
+
 
 
 app.use((err, req, res, next) => {
@@ -50,8 +55,9 @@ app.use((err, req, res, next) => {
     return res.send({ errMsg: err.message })
 })
 
-app.get("*", (req, res)=> {res.sendFile(path.join(_dirname, "client", "build", "index.html"))})
+
+app.get("*", (req, res) => {res.sendFile(path.join(__dirname, "client", "build", "index.html"))})
 
 app.listen(port, () => {
-    console.log("Server is running on local port 9000")
+    console.log("Server is running on local port 8000")
 })
