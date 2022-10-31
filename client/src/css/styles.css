@@ -101,6 +101,7 @@ a:hover {
 
 .member-or-not {
     color: #00C3BF;
+    padding-bottom: 5%;
 }
 
 .sign-up-btn {
@@ -790,7 +791,7 @@ a:hover {
         transform: translate(65%, 75%);
         /* background-color: rgba(209, 207, 207, 0.9); */
         background-color: rgba(186, 233, 251, 0.9);
-        padding-bottom: 25%;
+        padding-bottom: 18%;
     }
 
     .auth-container>input {
@@ -1032,7 +1033,7 @@ a:hover {
         height: 18%;
         background-color: rgba(186, 233, 251, 0.9);
         transform: translate(70%, 67%);
-        padding-bottom: 12%;
+        padding-bottom: 18%;
     }
 
     .auth-container>form>input {
