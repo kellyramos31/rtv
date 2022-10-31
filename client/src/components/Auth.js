@@ -36,30 +36,40 @@ export default function Auth(){
 
   return (
     <div className="auth-container">
-
-      { !toggle ?
+      {!toggle ? (
         <>
-          <AuthForm 
+          <AuthForm
             handleChange={handleChange}
             handleSubmit={handleSignup}
             inputs={inputs}
             btnText="Sign up"
             errMsg={errMsg}
           />
-          <p onClick={toggleForm} className="member-or-not">Already a member?</p>
+          <p onClick={toggleForm} className="member-or-not">
+            Already a member?
+          </p>
+          <div className="sign-in-instructions">
+            <div className="title-instructions">SIGN-IN</div>
+            <div className="instruct">Click the "Already a member?" button</div>
+            <div className="instruct">and login with the following:</div>
+            <div className="login-instruct">username: guest</div>
+            <div className="login-instruct">password: guest</div>
+          </div>
         </>
-      :
+      ) : (
         <>
-          <AuthForm 
+          <AuthForm
             handleChange={handleChange}
             handleSubmit={handleLogin}
             inputs={inputs}
             btnText="Login"
             errMsg={errMsg}
           />
-          <p onClick={toggleForm} className="member-or-not">Not a member?</p>
+          <p onClick={toggleForm} className="member-or-not">
+            Not a member?
+          </p>
         </>
-      }
+      )}
     </div>
-  )
+  );
 }
