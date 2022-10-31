@@ -1030,7 +1030,7 @@ a:hover {
 
           .sign-in-instructions {
      
-              margin: auto;
+              margin-left: -51%;
           }
 
     .app-title {
@@ -1051,7 +1051,7 @@ a:hover {
         height: 18%;
         background-color: rgba(186, 233, 251, 0.9);
         transform: translate(70%, 67%);
-        padding-bottom: 12%;
+        padding-bottom: 20%;
     }
 
     .auth-container>form>input {
