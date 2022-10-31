@@ -904,7 +904,6 @@ a:hover {
         width: 65%;
     }
 
-
     .comment-list-item {
         flex-basis: 100%;
         flex-wrap: wrap;
@@ -1028,10 +1027,9 @@ a:hover {
 
     }
 
-          .sign-in-instructions {
-     
-              margin-left: -51%;
-          }
+    .sign-in-instructions {
+            
+     }
 
     .app-title {
         color: rgb(253, 201, 31);
