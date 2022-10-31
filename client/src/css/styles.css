@@ -1049,7 +1049,7 @@ a:hover {
         height: 18%;
         background-color: rgba(186, 233, 251, 0.9);
         transform: translate(70%, 28%);
-        padding-bottom: 20%;
+        padding-bottom: 5%;
     }
 
     .auth-container>form>input {
