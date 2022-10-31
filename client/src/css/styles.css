@@ -116,7 +116,7 @@ a:hover {
     margin: 1.5% 23% 0 23%;
     border-radius: 7px;
     background-color: rgba(0, 30, 78, .6);
-    font-size: small;
+    font-size: .8em;
 }
 
 .profile {
@@ -1028,7 +1028,7 @@ a:hover {
     }
 
     .sign-in-instructions {
-            
+       margin-left: 51%;     
      }
 
     .app-title {
@@ -1048,7 +1048,7 @@ a:hover {
         width: 22%;
         height: 18%;
         background-color: rgba(186, 233, 251, 0.9);
-        transform: translate(70%, 67%);
+        transform: translate(70%, 28%);
         padding-bottom: 20%;
     }
 
