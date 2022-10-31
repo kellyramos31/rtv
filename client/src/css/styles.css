@@ -108,17 +108,6 @@ a:hover {
     color: black;
 }
 
-.sign-in-instructions {
-    color: whitesmoke;
-    text-align: center;
-    border: 2px solid whitesmoke;
-    padding: 5px 3px 5px 3px;
-    margin: 1.5% 23% 0 23%;
-    border-radius: 7px;
-    background-color: rgba(0, 30, 78, .6);
-    font-size: .8em;
-}
-
 .profile {
     display: flex;
     flex-direction: column;
@@ -801,6 +790,7 @@ a:hover {
         transform: translate(65%, 75%);
         /* background-color: rgba(209, 207, 207, 0.9); */
         background-color: rgba(186, 233, 251, 0.9);
+        padding-bottom: 3%;
     }
 
     .auth-container>input {
@@ -810,10 +800,6 @@ a:hover {
     .auth-container>p {
         transform: translate(135%, 1050%);
         color: black;
-    }
-
-    .sign-in-instructions{
-        background-color: #0F4C75;
     }
 
     .app-title {
@@ -903,6 +889,7 @@ a:hover {
     .all-issues-container {
         width: 65%;
     }
+
 
     .comment-list-item {
         flex-basis: 100%;
@@ -1027,10 +1014,6 @@ a:hover {
 
     }
 
-    .sign-in-instructions {
-       margin-left: 51%;     
-     }
-
     .app-title {
         color: rgb(253, 201, 31);
         background-color: #0F4C75;
@@ -1048,8 +1031,8 @@ a:hover {
         width: 22%;
         height: 18%;
         background-color: rgba(186, 233, 251, 0.9);
-        transform: translate(70%, 28%);
-        padding-bottom: 15%;
+        transform: translate(70%, 67%);
+        padding-bottom: 12%;
     }
 
     .auth-container>form>input {
@@ -1075,9 +1058,5 @@ a:hover {
         font-size: small;
         transform: translate(100%, 650%);
         color: black;
-    }
-
-    .member-or-not {
-        margin-top: -20%;
     }
 }
