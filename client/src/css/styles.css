@@ -112,10 +112,11 @@ a:hover {
     color: whitesmoke;
     text-align: center;
     border: 2px solid whitesmoke;
-    padding: 5px 0 5px 0;
-    margin: 7% 22% 0 22%;
+    padding: 5px 3px 5px 3px;
+    margin: 1.5% 22% 0 22%;
     border-radius: 7px;
     background-color: rgba(0, 30, 78, .6);
+    font-size: smaller;
 }
 
 .profile {
@@ -800,7 +801,6 @@ a:hover {
         transform: translate(65%, 75%);
         /* background-color: rgba(209, 207, 207, 0.9); */
         background-color: rgba(186, 233, 251, 0.9);
-        padding-bottom: 20%;
     }
 
     .auth-container>input {
