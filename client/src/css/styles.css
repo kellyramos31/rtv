@@ -1049,7 +1049,7 @@ a:hover {
         height: 18%;
         background-color: rgba(186, 233, 251, 0.9);
         transform: translate(70%, 28%);
-        padding-bottom: 5%;
+        padding-bottom: 15%;
     }
 
     .auth-container>form>input {
@@ -1075,5 +1075,9 @@ a:hover {
         font-size: small;
         transform: translate(100%, 650%);
         color: black;
+    }
+
+    .member-or-not {
+        margin-top: -20%;
     }
 }
