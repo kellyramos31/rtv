@@ -812,12 +812,9 @@ a:hover {
         color: black;
     }
 
-  .sign-in-instructions {
-      padding-left: 3px;
-      padding-right: 3px;
-      margin-left: 10%;
-      margin-right: 10%;
-  }
+    .sign-in-instructions{
+        background-color: #0F4C75;
+    }
 
     .app-title {
         background-color: #0F4C75;
@@ -1030,6 +1027,11 @@ a:hover {
         margin-left: -51%;
 
     }
+
+          .sign-in-instructions {
+     
+              margin: auto;
+          }
 
     .app-title {
         color: rgb(253, 201, 31);
