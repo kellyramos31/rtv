@@ -113,6 +113,8 @@ a:hover {
     border: 2px solid whitesmoke;
     text-align: center;
     font-size: 9px;
+    border-radius: 5px;
+    padding: 2px;
 }
 
 .profile {
