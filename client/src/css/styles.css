@@ -109,8 +109,10 @@ a:hover {
 }
 
 .sign-in-instructions{
-    color: whitesmoke;
+    color: #0F4C75;
     text-align: center;
+    font-size: .5em;
+    border: 2px solid #0F4C75;
 }
 
 .profile {
