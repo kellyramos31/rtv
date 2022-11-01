@@ -47,6 +47,14 @@ export default function Auth() {
           <p onClick={toggleForm} className="member-or-not">
             Already a member?
           </p>
+
+          <div className="sign-in-instructions">
+            <div className="title-instructions">SIGN-IN</div>
+            <div className="instruct">Click the "Already a member?" button</div>
+            <div className="instruct">and login with the following:</div>
+            <div className="login-instruct">username: guest</div>
+            <div className="login-instruct">password: guest</div>
+          </div>
         </>
       ) : (
         <>
@@ -62,13 +70,6 @@ export default function Auth() {
           </p>
         </>
       )}
-      <div className="sign-in-instructions">
-        <div className="title-instructions">SIGN-IN</div>
-        <div className="instruct">Click the "Already a member?" button</div>
-        <div className="instruct">and login with the following:</div>
-        <div className="login-instruct">username: guest</div>
-        <div className="login-instruct">password: guest</div>
-      </div>
     </div>
   );
 }
